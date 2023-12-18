@@ -10,7 +10,7 @@ fun main() {}
 private fun testOrigin(origin: IrStatementOrigin): Boolean {
     val canUseOriginHere = IrStatementOrigin.GET_PROPERTY
 
-    // but can use it in when:
+    // but can't use it in when:
     return when (origin) {
         is IrStatementOrigin.GET_PROPERTY -> true
         else -> false
